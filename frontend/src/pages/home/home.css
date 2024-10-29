@@ -1,0 +1,100 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+/* Your custom styles */
+.slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.slide-image {
+  width: 100%;
+  height: 400px; /* Adjust this based on your preferred height */
+  object-fit: cover;
+}
+
+.home-content {
+  text-align: center;
+  padding: 20px;
+  overflow: hidden; /* Ensure the animated text stays within bounds */
+}
+
+/* Keyframes for colorful running text */
+@keyframes colorfulRunningText {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+    background-position: 0%;
+  }
+  100% {
+    transform: translateX(-100%); /* Move to the left */
+    background-position: 200%; /* Move the background gradient */
+  }
+}
+
+/* Colorful gradient effect for the text */
+.home-content h1 {
+  font-size: 3em;
+  color: transparent; /* Text is transparent */
+  background: linear-gradient(90deg, #ff00cc, #3333ff, #00ffcc, #ffcc00, #ff0033); /* Colorful gradient */
+  background-size: 200%;
+  -webkit-background-clip: text; /* Use background as text color */
+  background-clip: text; /* For non-webkit browsers */
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: inline-block;
+  animation: colorfulRunningText 10s linear infinite; /* Smooth, infinite animation */
+}
+.home-content p {
+  font-size: 1.5em;
+  font-weight: bold;
+  animation: highLevelTextAnimation 3s ease-in-out infinite alternate;
+  background: linear-gradient(90deg, #ff5733, #33ff57, #3375ff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.common-btn {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.common-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .slide-image {
+    height: 300px; /* Adjust image height for tablets */
+  }
+
+  .home-content h1 {
+    font-size: 2em; /* Smaller text size for smaller screens */
+  }
+
+  .common-btn {
+    padding: 8px 16px; /* Adjust button size */
+  }
+}
+
+@media (max-width: 480px) {
+  .slide-image {
+    height: 250px; /* Adjust image height for mobile screens */
+  }
+
+  .home-content h1 {
+    font-size: 1.8em; /* Further reduce font size on smaller screens */
+  }
+
+  .common-btn {
+    padding: 6px 12px; /* Smaller button for mobile */
+  }
+}

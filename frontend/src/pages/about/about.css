@@ -1,0 +1,156 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #1a1a1a; /* Dark background */
+  color: #f0f0f0; /* Light text for contrast */
+  line-height: 1.6;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+  font-size: 4vw; /* Responsive font size */
+  margin-bottom: 40px;
+  color: #f8c300; /* Vibrant gold */
+}
+
+/* General styling for team sections */
+.team-member {
+  background-color: #2d2d2d;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 280px;
+  display: inline-block;
+}
+
+/* Hover effect for team members */
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Styling for circular images */
+.team-member img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+/* Image zoom effect on hover */
+.team-member:hover img {
+  transform: scale(1.1);
+}
+
+/* Member info section */
+.member-info {
+  padding: 20px 0;
+}
+
+.member-info h2 {
+  font-size: 22px;
+  color: #f8c300;
+  margin-bottom: 10px;
+}
+
+.member-info p {
+  font-size: 16px;
+  color: #aaa;
+  margin-bottom: 15px;
+}
+
+/* Social media links */
+.social-links a {
+  margin: 0 10px;
+  color: #f8c300;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #ff4747;
+}
+
+/* Team section layout */
+.expert-teachers,
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Responsive styling */
+@media (max-width: 1024px) {
+  h1 {
+    font-size: 5vw; /* Adjust header size for tablets */
+  }
+
+  .team-member {
+    max-width: 45%; /* More width for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 6vw;
+  }
+
+  .team-member {
+    width: 100%;
+    max-width: 100%; /* Full width for small screens */
+  }
+
+  .expert-teachers,
+  .team-members {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Mobile-specific font size adjustments */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 7vw;
+  }
+
+  .team-member {
+    padding: 15px;
+  }
+
+  .member-info h2 {
+    font-size: 20px;
+  }
+
+  .member-info p {
+    font-size: 14px;
+  }
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

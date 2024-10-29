@@ -1,0 +1,119 @@
+/* Testimonials Section */
+.testimonials {
+  padding: 50px 20px;
+  text-align: center;
+  background-color: #e6e6fa;
+}
+
+.testimonials h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  position: relative;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+/* Testimonials Cards Grid */
+.testimonials-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-items: center;
+}
+
+.testimonial-card {
+  background-color: #ff69b4;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations for student image */
+/* Updated Animations for student image */
+.student-image {
+  width: 150px; /* Increase the width */
+  height: 150px; /* Increase the height */
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.student-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+
+.info {
+  position: relative;
+  animation: fadeInUp 1s ease-in-out 0.4s;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.position {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Hover effect to scale and color change */
+.testimonial-card:hover .name {
+  color: #0056b3;
+}
+
+.testimonial-card:hover .position {
+  color: #333;
+}
+
+/* Responsive Layout */
+@media (max-width: 992px) {
+  .testimonials-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
+  }
+
+  .testimonials h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-cards {
+    grid-template-columns: 1fr; /* 1 column for mobile */
+  }
+
+  .testimonial-card {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .testimonials h2 {
+    font-size: 1.8rem;
+  }
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

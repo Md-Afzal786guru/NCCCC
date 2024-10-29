@@ -1,0 +1,46 @@
+.student-dashboard {
+  padding: 100px 20px; /* Increase padding for more spacious feel */
+  text-align: center;
+  min-height: 65vh; /* Increased minimum height for a larger viewport */
+  background: linear-gradient(135deg, #000000, #ffffff); /* Add a subtle background gradient for depth */
+  color: #333; /* Darker text color for readability */
+  font-family: 'Roboto', sans-serif; /* Use a modern, readable font */
+
+  .dashboard-content {
+      display: flex;
+      justify-content: space-evenly; /* Ensure even distribution */
+      flex-wrap: wrap;
+      gap: 30px; /* Increase gap for better spacing between elements */
+      margin-top: 60px; /* More margin for a clear visual hierarchy */
+      max-width: 1200px; /* Limit the width for better readability */
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  h1 {
+      font-size: 2.5rem; /* Larger heading for emphasis */
+      color: #0056b3; /* Accent color for headings */
+      margin-bottom: 20px;
+  }
+
+  p {
+      font-size: 1.1rem; /* Slightly larger body text for better readability */
+      line-height: 1.6; /* Improved line spacing for readability */
+      color: #666; /* Softer gray for secondary text */
+  }
+
+  button {
+      padding: 10px 25px;
+      background-color: #0056b3; /* Accent button color */
+      color: #fff; /* White text on buttons */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+  }
+
+  button:hover {
+      background-color: #004494; /* Darker shade for hover effect */
+  }
+}
